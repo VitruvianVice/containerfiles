@@ -2,6 +2,10 @@ FROM greyltc/archlinux-aur:yay
 
 run echo 'Server = https://ftp.fau.de/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 
+run echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen \
+    && echo LANG=en_US.UTF-8 > /etc/locale.conf \
+    && locale-gen
+
 RUN pacman -Syyu --noconfirm \
     && pacman -S --noconfirm \
     bat \
@@ -14,14 +18,19 @@ RUN pacman -Syyu --noconfirm \
     gpa \
     graphviz \
     htop \
+    hunspell \
+    hunspell-de \
+    hunspell-en_us \
     imagemagick \
+    jre-openjdk \
     openssh \
+    pandoc \
     pdf2svg \
     perl-clone \
     perl-file-homedir \
     perl-yaml-tiny \
     ripgrep \
-    snap-sync \
+    stow \
     texlive-bibtexextra \
     texlive-bin \
     texlive-core \
@@ -36,6 +45,3 @@ RUN pacman -Syyu --noconfirm \
 
 RUN aur-install tllocalmgr-git
 
-run echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen \
-    && echo LANG=en_US.UTF-8 > /etc/locale.conf \
-    && locale-gen

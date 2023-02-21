@@ -11,6 +11,7 @@ RUN pacman -Syyu --noconfirm \
     && pacman -S --noconfirm \
     bat \
     biber \
+    cmake \
     emacs-nativecomp \
     fd \
     fzf \

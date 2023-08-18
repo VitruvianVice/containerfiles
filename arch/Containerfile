@@ -25,26 +25,23 @@ RUN pacman -Syyu --noconfirm \
     hunspell-en_us \
     imagemagick \
     jre-openjdk \
+    libnotify \
+    libpulse \
     openssh \
     pandoc \
     pdf2svg \
     perl-clone \
     perl-file-homedir \
     perl-yaml-tiny \
+    python3 \
     ripgrep \
     shellcheck \
     shfmt \
     stow \
-    texlive-bibtexextra \
-    texlive-bin \
-    texlive-core \
-    texlive-fontsextra \
-    texlive-langextra \
-    texlive-pictures \
-    texlive-science \
     tmux \
     tree \
     vim \
+    watchexec \
     zathura-pdf-poppler
 
 RUN aur-install tllocalmgr-git

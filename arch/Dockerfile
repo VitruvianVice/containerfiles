@@ -1,9 +1,9 @@
 FROM greyltc/archlinux-aur:yay
 
-run curl 'https://archlinux.org/mirrorlist/?country=DE&protocol=https&ip_version=4' | sed 's:#Server:Server:' > /tmp/mirrorlist \
-    && rankmirrors -n 5 /tmp/mirrorlist > /etc/pacman.d/mirrorlist
+RUN curl 'https://archlinux.org/mirrorlist/?protocol=https&ip_version=4&use_mirror_status=on' | head -n 26 | sed 's:#Server:Server:' > /tmp/mirrorlist \
+    && rankmirrors -n 5 /tmp/mirrorlist | tee /etc/pacman.d/mirrorlist
 
-run echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen \
+RUN echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen \
     && echo LANG=en_US.UTF-8 > /etc/locale.conf \
     && locale-gen
 
@@ -42,7 +42,8 @@ RUN pacman -Syyu --noconfirm \
     tree \
     vim \
     watchexec \
-    zathura-pdf-poppler
+    zathura-pdf-poppler && \
+    pacman -Scc --noconfirm
 
-RUN aur-install tllocalmgr-git
-
+RUN aur-install tllocalmgr-git && \
+    pacman -Scc --noconfirm

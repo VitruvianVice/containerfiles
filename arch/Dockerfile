@@ -42,7 +42,9 @@ RUN pacman -Syyu --noconfirm \
     tree \
     vim \
     watchexec \
-    zathura-pdf-poppler
+    zathura-pdf-poppler && \
+    pacman -Scc --noconfirm
 
-RUN aur-install tllocalmgr-git
+RUN aur-install tllocalmgr-git && \
+    pacman -Scc --noconfirm
 

@@ -38,12 +38,16 @@ RUN pacman -Syyu --noconfirm \
     shellcheck \
     shfmt \
     stow \
+    texlive-basic \
+    texlive-bibtexextra \
+    texlive-fontsextra \
+    texlive-fontsrecommended \
+    texlive-latex \
+    texlive-latexextra \
+    texlive-latexrecommended \
+    texlive-luatex \
     tmux \
     tree \
     vim \
-    watchexec \
     zathura-pdf-poppler && \
-    pacman -Scc --noconfirm
-
-RUN aur-install tllocalmgr-git && \
     pacman -Scc --noconfirm

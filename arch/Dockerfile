@@ -38,16 +38,17 @@ RUN pacman -Syyu --noconfirm \
     shellcheck \
     shfmt \
     stow \
-    texlive-plaingeneric \
-    texlive-pictures \
-    texlive-luatex \
-    texlive-latexrecommended \
-    texlive-latexextra \
-    texlive-latex \
-    texlive-fontsrecommended \
-    texlive-fontsextra \
-    texlive-bibtexextra \
     texlive-basic \
+    texlive-bibtexextra \
+    texlive-binextra \
+    texlive-fontsextra \
+    texlive-fontsrecommended \
+    texlive-latex \
+    texlive-latexextra \
+    texlive-latexrecommended \
+    texlive-luatex \
+    texlive-pictures \
+    texlive-plaingeneric \
     tmux \
     tree \
     vim \

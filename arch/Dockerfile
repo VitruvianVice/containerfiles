@@ -24,7 +24,6 @@ RUN pacman -Syyu --noconfirm \
     hunspell-de \
     hunspell-en_us \
     imagemagick \
-    jre-openjdk \
     libnotify \
     libpulse \
     openssh \

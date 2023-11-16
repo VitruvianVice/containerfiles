@@ -42,12 +42,15 @@ RUN pacman -Syyu --noconfirm \
     texlive-binextra \
     texlive-fontsextra \
     texlive-fontsrecommended \
+    texlive-langgerman \
     texlive-latex \
     texlive-latexextra \
     texlive-latexrecommended \
     texlive-luatex \
+    texlive-mathscience \
     texlive-pictures \
     texlive-plaingeneric \
+    texlive-publishers \
     tmux \
     tree \
     vim \

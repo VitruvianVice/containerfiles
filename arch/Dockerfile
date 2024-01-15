@@ -12,6 +12,7 @@ RUN pacman -Syyu --noconfirm \
     bat \
     biber \
     cmake \
+    ctags \
     emacs-nativecomp \
     fd \
     fzf \
@@ -28,6 +29,7 @@ RUN pacman -Syyu --noconfirm \
     libpulse \
     openssh \
     pandoc \
+    parallel \
     pdf2svg \
     perl-clone \
     perl-file-homedir \

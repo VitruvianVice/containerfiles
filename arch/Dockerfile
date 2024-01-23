@@ -1,6 +1,6 @@
 FROM greyltc/archlinux-aur:yay
 
-RUN curl 'https://archlinux.org/mirrorlist/?protocol=https&ip_version=4&use_mirror_status=on' | head -n 26 | sed 's:#Server:Server:' > /tmp/mirrorlist \
+RUN curl 'https://archlinux.org/mirrorlist/?protocol=https&ip_version=4&use_mirror_status=on?country=US' | sed 's:#Server:Server:' | grep -v '^#' | head -n 25 > /tmp/mirrorlist \
     && rankmirrors -n 5 /tmp/mirrorlist | tee /etc/pacman.d/mirrorlist
 
 RUN echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen \

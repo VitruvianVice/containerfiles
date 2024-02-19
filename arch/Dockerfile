@@ -55,6 +55,8 @@ RUN pacman -Syyu --noconfirm \
     texlive-publishers \
     tmux \
     tree \
+    unzip \
     vim \
+    zip \
     zathura-pdf-poppler && \
     pacman -Scc --noconfirm

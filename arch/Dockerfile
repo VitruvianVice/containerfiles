@@ -18,7 +18,6 @@ RUN pacman -Syyu --noconfirm \
     fzf \
     git \
     git-delta \
-    gpa \
     graphviz \
     htop \
     hunspell \

@@ -9,11 +9,14 @@ RUN echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen \
 
 RUN pacman -Syyu --noconfirm \
     && pacman -S --noconfirm \
+    bash-language-server \
     bat \
     biber \
     cmake \
     ctags \
+    direnv \
     emacs-nativecomp \
+    enchant \
     fd \
     fzf \
     git \
@@ -26,6 +29,7 @@ RUN pacman -Syyu --noconfirm \
     imagemagick \
     libnotify \
     libpulse \
+    luarocks \
     openssh \
     pandoc \
     parallel \
@@ -56,6 +60,6 @@ RUN pacman -Syyu --noconfirm \
     tree \
     unzip \
     vim \
-    zip \
-    zathura-pdf-poppler && \
+    zathura-pdf-poppler \
+    zip && \
     pacman -Scc --noconfirm

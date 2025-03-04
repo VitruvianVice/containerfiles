@@ -15,7 +15,7 @@ RUN pacman -Syyu --noconfirm \
     cmake \
     ctags \
     direnv \
-    emacs-nativecomp \
+    emacs-wayland \
     enchant \
     fd \
     fzf \

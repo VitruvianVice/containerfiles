@@ -4,7 +4,7 @@ LABEL description="Fedora Toolbox base with Zsh as default shell"
 # --------------------------------------------------
 # DNF PACKAGES
 
-RUN dnf group install development-tools
+RUN dnf -y group install development-tools
 # Remove dependency-installations and disentangle group installations:
 # $ dnf repoquery --userinstalled --qf "%{name} %{reason}\n" | awk '$2 == "User" { print $1 }' | sort > dnf-packages
 # This list includes packages that were shipped as part of the image, we can remove those:
